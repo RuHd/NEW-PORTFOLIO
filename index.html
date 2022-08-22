@@ -4,48 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Front-End Development - Ruan Mesquita</title>
 </head>
 <body>
     <header>
-        <h1>Front-End</h1>
-        <section>
-            <h1>Ruan Mesquita</h1>
-            <section>
-                <a>Linkedin</a>
-                <a>GitHub</a>
-            </section>
-        </section>
-        
+        <h1 class="logo-title">Ruan Mesquita Portfolio</h1>
     </header>
     <main>
         <div id="welcome-section">
-            <h1>Seja Bem-vindo! :)</h1>
-            <p>
-                Apresento a você meu portfólio com diversos projetos
+            <h1 class="welcome">Seja Bem-vindo! :)</h1>
+            <p class="welcomeTxt">
+                Apresento a você meu portfólio de Desenvolvimento Front-End com diversos projetos
                 desenvolvidos, desde sites utilizando html/<a></a>css e Javascript
                 como também algumas funcionalidades. <br/><br/>
-
-                
             </p>
         </div>
-        <div>
-            <a></a>
-            <a></a>
-            <a></a>
+        <h1 style="text-align: center; font-size: 36px; margin-top: 15px;">Projetos: </h1>
+        <div class="cards-group">
+            <a href="#" class="card-option website-option">
+                <img src="./Website-image.png" alt="">
+                <section class="card-txt">
+                    <h3>Projetos Websites</h3>
+                    <p>Projetos de template para landing pages e recriação de sites existentes usando ReactJs</p>
+                </section>
+            </a>
+            <a href="#" class="card-option js-option">
+                <img src="./js-logo.png" alt="">
+                <section class="card-txt">
+                    <h3>Aplicações JS</h3>
+                    <p>Algumas aplicações utilizando Javascript Vanilla para o estudo de lógica de programação e aplicações de conceito de Programação Orientada a Objeto</p>
+                </section>
+            </a>
+            <a href="#" class="card-option css-option">
+                <img src="CSS-LOGO.png" alt="">
+                <section class="card-txt">
+                    <h3>Animações CSS</h3>
+                    <p>Demonstração de algumas animações possíveis pelo CSS.</p>
+                </section>
+            </a>
         </div>
         <div id="aboutMe">
+            <img/>
             <p>
                 Me chamo Ruan e tenho 28 anos de idade. Sou formado em Análise e Desenvolvimento
                 de Sistemas pela Universidade Paulista (UNIP). Sou nerd, dedicado e também sou correto
-                em tudo que faço. Meu objetivo atual é o seguinte: trabalhar com você ;)
+                em tudo que faço. Meu objetivo atual é o seguinte: trabalhar com você ;).
             </p>
-            <button></button>
+            <a href="#">Baixar Meu Currículo</a>
         </div>
     </main>
     <footer>
-
+        <h3 class="logo-title"> Ruan Mesquita Portfolio - <span id="year">2022</span></h3> 
     </footer>
     
 </body>
+<script>
+    const d = new Date()
+    const body = document.querySelector("body")
+    const welcome = document.querySelector(".welcome")
+    const welcomeTxt = document.querySelector(".welcomeTxt")
+    const cards = document.getElementsByClassName("card-option")
+    const aboutMe = document.getElementById("aboutMe")
+    const year = document.getElementById("year")
+
+    window.onload = () => {
+        body.style.opacity = 1
+        welcome.style.opacity = 1
+        welcomeTxt.style.opacity = 1
+        for (let i = 0; i<cards.length;i++) {
+            cards[i].style.transform = "rotateY(0deg)"
+        }
+    }
+
+    window.addEventListener("scroll",()=> {
+        if(this.scrollY >= 140) aboutMe.style.opacity = 1
+    })
+
+    year.innerText = d.getFullYear()
+</script>
 </html>
