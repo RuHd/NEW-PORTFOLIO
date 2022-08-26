@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Play', sans-serif; 
+    color: rgb(34, 34, 34);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: 1.5s;
+}
+
+
+header {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(34, 34, 34);
+    
+}
+
+header * {
+    color: white;
+}
+
+header a:hover{
+    transition: .4s;
+    border-bottom: 1px solid white;
+}
+
+#btns--title {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+#btns--collections {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    position: relative;
+    padding: 10px;
+    border: 1px solid rgb(34, 34, 34);
+    background-color: transparent;
+    transition: all .7s;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+/* Left to right animation */
+
+.leftToRight--btn {
+    border: none;
+    transition: all .7s;
+
+}
+
+.leftToRight--btn::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(34, 34, 34);
+    width: 0%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s;
+}
+
+.leftToRight--btn:hover {
+    
+    color: white;
+    
+}   
+
+.leftToRight--btn:hover::before {
+    transition: .5s;
+    width: 100%;
+
+}
+
+/* reflect animation*/
+
+.diagonal--btn {
+    overflow: hidden;
+    z-index: 1;
+    transition: .5s;
+    background-color: rgb(34, 34, 34);
+    color: white;
+   
+    
+}
+
+.diagonal--btn::before {
+    content: '';
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    background-color:white; 
+    left: -100%;
+    transform: rotateZ(-125deg);
+    bottom: -6px;
+    transition: all .5s;
+    opacity: .3;
+
+}
+
+
+.diagonal--btn:hover {
+    background-color: rgb(34, 34, 34);
+    color: white;
+    text-shadow: -2px -2px 5px white, 2px 2px 5px white, 0px 0px 2px white ;
+    
+}
+
+.diagonal--btn:hover::before{
+    left: 100%;
+}
+
+.diagonal--btn::after {
+    position: absolute;
+}
+
+/* Flip Animation */
+
+.flip--btn {
+    transition: .3s;
+}
+
+.flip--container:hover .flip--btn {
+    transform: rotateX(90deg);
+}
+
+.flip--container:hover .backTxt {
+    opacity: 1;
+    transform: rotateX(0deg);
+    z-index: 1;
+}
+
+.backTxt {
+    opacity: 0;
+    text-align: center;
+    line-height: 35px;
+    position: absolute;
+    margin: 0 auto;
+    background-color: rgb(34, 34, 34);
+    transform: rotateX(-90deg);
+    color: white;
+    left: 0%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all .3s;
+    transition-delay: .3s;
+}
+
+
+
+

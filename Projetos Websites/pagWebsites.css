@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Exo:wght@100&family=Play&family=Playfair+Display+SC&family=Raleway:wght@100&family=Roboto+Condensed:wght@300&family=Rubik:wght@300&family=Source+Sans+Pro:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Exo:wght@100&family=Kanit:wght@100&family=Play&family=Playfair+Display+SC&family=Raleway:wght@100&family=Roboto+Condensed:wght@300&family=Rubik:wght@300&family=Source+Sans+Pro:wght@200;300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Play', sans-serif;
+    color: rgb(34, 34, 34);
+   
+}
+
+body {
+    opacity: 0;
+    transition: 1s;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.transition {
+    opacity: 1;
+}
+
+header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 15px;
+        height: 100px;
+        width: 100%;
+        background-color: rgb(34, 34, 34);
+} 
+
+header h1 {
+    transition: .3s;
+    font-weight: lighter;
+    color: white;
+}
+
+header a {
+    color: white;
+}
+
+main
+{
+    margin-top: 20px;
+    text-align: center;
+}
+
+main > p {
+    margin-top: 15px;
+}
+
+main ul
+{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* ESTILIZAÇÃO DO CARD DE SELEÇÃO DOS WEBSITES */
+
+.websiteCard--Container {
+    width: 400px;
+    height: 350px;
+    box-shadow: 3px 5px 10px black;
+    padding: 10px;
+    transition: opacity 0.8s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.img--Container {
+    width: 380px;
+    height: 200px;
+}
+
+.websiteCard--Container img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.websiteCard--Container p {
+    margin-top: 20px;
+}    
+
+.websiteCard--Container:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.original-Link {
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+    transition: .3s;
+}
+
+.original-Link:hover {
+    color: red;
+    cursor: pointer;
+}
+
+/* @media screen and (max-width:900px){
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header
+    {
+        z-index: 2;
+        width: 100%;
+    }
+
+    header h2 {
+        font-size: 18px;
+        transition: .3s;
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+}   */
+

@@ -12,10 +12,10 @@
     <header>
         <h1 class="logo-title">Ruan Mesquita Portfolio</h1>
         <section id="social-media">
-            <a href="">
+            <a href="https:\\www.linkedin.com/in/ruanmesquita">
                 <i class="fa-brands fa-linkedin"></i>
             </a>
-            <a href="">
+            <a href="https://github.com/RuHd">
                 <i class="fa-brands fa-github"></i>
             </a>
             <a href="#" class="whatsOption">
@@ -33,26 +33,26 @@
             <p class="welcomeTxt">
                 Apresento a você meu portfólio de Desenvolvimento Front-End com diversos projetos
                 desenvolvidos, desde sites utilizando html/<a></a>css e Javascript
-                como também algumas funcionalidades. <br/><br/>
+                como também algumas aplicações e animações. <br/><br/>
             </p>
         </div>
         <h1 class="project-Title">Projetos: </h1>
         <div class="cards-group">
-            <a href="#" class="card-option website-option">
+            <a href="./Projetos Websites/pagWebsites.html" class="card-option website-option">
                 <img src="./Website-image.png" alt="">
                 <section class="card-txt">
                     <h3>Projetos Websites</h3>
                     <p>Projetos de template para landing pages e recriação de sites existentes usando ReactJs.</p>
                 </section>
             </a>
-            <a href="#" class="card-option js-option">
+            <a href="./Aplicações JS/aplicaçõesJs.html" class="card-option js-option">
                 <img src="./js-logo.png" alt="">
                 <section class="card-txt">
                     <h3>Aplicações JS</h3>
                     <p>Algumas aplicações utilizando Javascript Vanilla para o estudo de lógica de programação e aplicações de conceito de Programação Orientada a Objeto.</p>
                 </section>
             </a>
-            <a href="#" class="card-option css-option">
+            <a href="./Animações CSS/animações.html" class="card-option css-option">
                 <img src="CSS-LOGO.png" alt="">
                 <section class="card-txt">
                     <h3>Animações CSS</h3>
@@ -67,25 +67,26 @@
                 de Sistemas pela Universidade Paulista (UNIP). Sou nerd, dedicado e também sou correto
                 em tudo que faço. Meu objetivo atual é o seguinte: trabalhar com você ;).
             </p>
-            <a href="#">Baixar Meu Currículo</a>
+            <a href="./Ruan-Currículo (1).docx">Baixar Meu Currículo</a>
         </div>
     </main>
     <footer>
-        <h3 class="logo-title"> Ruan Mesquita Portfolio - <span id="year"></span></h3> 
+        <h3 class="logo-title"> Ruan Mesquita Portfolio - <span class="year"></span></h3> 
     </footer>
     
 </body>
 <script src="./scripts/loadPage.js"></script>
+<script src="./scripts/getYear.js"></script>
 <script>
 
-    const d = new Date()
+    
     const welcome = document.querySelector(".welcome")
     const welcomeTxt = document.querySelector(".welcomeTxt")
     const cards = document.getElementsByClassName("card-option")
     const aboutMe = document.getElementById("aboutMe")
-    const year = document.getElementById("year")
     const whatsOption = document.querySelector(".whatsOption")
     const whatsNum = document.querySelector(".whatsnum")
+    const arrow = document.querySelector(".arrow")
 
     window.onload = () => {
         body.style.opacity = 1
@@ -102,8 +103,8 @@
 
     whatsOption.addEventListener("click",() => {
         whatsNum.classList.toggle("whatsNum-shown")
+        arrow.classList.toggle("whatsNum-shown")
     })
 
-    year.innerText = d.getFullYear()
 </script>
 </html>
