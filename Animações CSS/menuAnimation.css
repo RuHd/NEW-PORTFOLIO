@@ -1,0 +1,42 @@
+#menu--collection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px ;
+    border-top: 1px solid black;
+    padding-top: 10px;
+}
+
+#menu--collection a:hover {
+    cursor: pointer;
+}
+
+.red--menu {
+    background-color: rgb(187, 0, 0);
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    align-items: center;
+    height: 30px;
+    border: 1px solid rgb(187, 0, 0);
+
+    
+}
+
+.red--menu a {
+    height: 100%;
+    padding: 10px;
+}
+
+.red--menu a:hover {
+    transition: .5s;
+    background-color: white;
+    color: black;
+}
+
+.red--menu * {
+    color: white;
+}
+

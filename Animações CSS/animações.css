@@ -175,6 +175,52 @@ header a:hover{
     transition-delay: .3s;
 }
 
+/* Circle lift animation */
+
+.circle--btn {
+    overflow: hidden;
+    z-index: 1;
+}
+
+.circle--btn:hover {
+    color: white;
+}
+
+.circle--btn::after {
+    position: absolute;
+    content: '';
+    background-color: rgb(34, 34, 34);
+    width: 100%;
+    height: 100px;
+    left: 0;
+    top: 80px; /* hidden - 40px fully shown - 0px*/
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    z-index: -1; 
+    transition: .5s;
+} 
+
+.circle--btn:hover::after {
+    color: white;
+    top: 0px;
+    animation-name: borderUp;
+    animation-duration: .2s;
+    animation-delay: .3s;
+    animation-fill-mode: both;
+}
+
+@keyframes borderUp {
+    0% {
+        border-top-left-radius: 15%;
+        border-top-right-radius: 15%; 
+    }
+
+    100% {
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;  
+    }
+}
+
 
 
 
